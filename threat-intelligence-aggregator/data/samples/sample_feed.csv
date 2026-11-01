@@ -1,0 +1,7 @@
+type,value
+IP,203.0.113.10
+DOMAIN,example-malware.test
+URL,https://example-malware.test/login
+HASH,44d88612fea8a8f36de82e1278abb02f
+EMAIL,analyst@example.test
+IP,not-an-ip

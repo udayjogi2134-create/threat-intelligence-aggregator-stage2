@@ -1,0 +1,19 @@
+[   10734ms] [ERROR] Executing inline event handler violates the following Content Security Policy directive 'script-src 'nonce-cixaBs05dldOfD1m_FogHg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:'. Note that 'unsafe-inline' is ignored if either a hash or nonce value is present in the source list. The action has been blocked. @ https://www.google.com/search?gs_ssp=eJzj4tLP1TfIyK1MKy5TYDRgdGDw4khLTE5Nys_PBgBmYAfL&q=facebook&oq=face&gs_lcrp=EgZjaHJvbWUqEwgBEC4YgwEYxwEYsQMY0QMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEwgBEC4YgwEYxwEYsQMY0QMYgAQyBggCEEUYOTINCAMQABiDARixAxiABDIHCAQQABiABDITCAUQABiDARixAxiABBiKBRiNBjITCAYQABiDARixAxiABBiKBRiNBjIGCAcQBRhA0gEIMjI5MmowajeoAgiwAgHxBdHaIUeP8XzH8QXR2iFHj_F8xw&sourceid=chrome&source=chrome.ob&ie=UTF-8&sei=R4znaqrIBNSG4-EPt9Lv2Q0:0
+[   12289ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'attribution-reporting'. @ :0
+[   12289ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'shared-storage'. @ :0
+[   12289ms] [WARNING] Error with Permissions-Policy header: Unrecognized feature: 'shared-storage-select-url'. @ :0
+[   12925ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.facebook.com/:0
+[   13810ms] [LOG] 
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black; @ https://static.xx.fbcdn.net/rsrc.php/v4/y6/r/mR6LA8E7mEx.js:251
+[   13810ms] [LOG] 
+%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px;  @ https://static.xx.fbcdn.net/rsrc.php/v4/y6/r/mR6LA8E7mEx.js:251
+[   13811ms] [LOG] 
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px;  @ https://static.xx.fbcdn.net/rsrc.php/v4/y6/r/mR6LA8E7mEx.js:251
+[   13811ms] [LOG] 
+%c  @ https://static.xx.fbcdn.net/rsrc.php/v4/y6/r/mR6LA8E7mEx.js:251
+[   15159ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://static.xx.fbcdn.net/rsrc.php/v4/yj/r/atBZ6RzieZ4.js:59
+[  555876ms] [ERROR] ErrorUtils caught an error:
+
+Cannot read properties of null (reading 'request_qr_code_login_props') [Caught in: An uncaught error was thrown inside `RelayObservable`.]
+
+Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. {column: 2982, clientTime: 1793560172, extra: Object, guardList: Array(1), hash: yy4oxt} @ https://static.xx.fbcdn.net/rsrc.php/v4/y6/r/mR6LA8E7mEx.js:84
