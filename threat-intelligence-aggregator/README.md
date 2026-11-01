@@ -24,6 +24,18 @@ Do not run `app.py` directly with `python app.py`; Streamlit apps must be
 started with `streamlit run` (or `python -m streamlit run`) to create the
 Streamlit runtime context.
 
+## Deploy on Vercel
+Set the Vercel project's Root Directory to `threat-intelligence-aggregator`.
+The top-level `app` in `app.py` is a FastAPI ASGI entrypoint for Vercel; the
+same file remains the Streamlit app when started with the local command above.
+The web dashboard provides indicator listing, manual IOC entry, and CSV/JSON/TXT
+exports.
+
+Vercel's `/tmp` storage is temporary and instance-local. The deployed dashboard
+therefore does not provide durable or shared SQLite data; configure
+`THREAT_INTEL_DB_PATH` only when using a writable mounted database, or replace
+SQLite with a managed database for production persistence.
+
 ## Sample data
 Upload `data/samples/sample_feed.csv` in the sidebar. The sample uses reserved/example indicators and is not a real threat feed.
 
