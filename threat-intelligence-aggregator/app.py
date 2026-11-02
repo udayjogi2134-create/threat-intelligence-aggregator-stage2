@@ -2,6 +2,7 @@ import database
 import feed_manager
 import normalizer
 import pandas as pd
+import reporting
 import requests
 import streamlit as st
 from risk_engine import severity

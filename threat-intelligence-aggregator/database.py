@@ -1,5 +1,4 @@
 """SQLite persistence with source provenance and feed-run audit records."""
-import json
 import sqlite3
 from datetime import datetime, timezone
 from config import DB_PATH, DATA_DIR
