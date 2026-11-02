@@ -15,7 +15,7 @@ A defensive, rule-based IOC collection and triage web application built with Pyt
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
-py -m pip install -r requirements.txt
+py -m pip install -r requirements.txt -r requirements-dashboard.txt
 py -m unittest discover -s tests -v
 py -m streamlit run app.py
 ```
@@ -26,8 +26,11 @@ Streamlit runtime context.
 
 ## Deploy on Vercel
 Set the Vercel project's Root Directory to `threat-intelligence-aggregator`.
-The top-level `app` in `app.py` is a FastAPI ASGI entrypoint for Vercel; the
-same file remains the Streamlit app when started with the local command above.
+Vercel uses the lightweight FastAPI entrypoint in `api.py`, keeping Streamlit
+and pandas out of the web function's dependencies and cold-start imports. The
+Streamlit dashboard dependencies are listed separately in
+`requirements-dashboard.txt` and remain available locally with the command
+above.
 The web dashboard provides indicator listing, manual IOC entry, and CSV/JSON/TXT
 exports.
 

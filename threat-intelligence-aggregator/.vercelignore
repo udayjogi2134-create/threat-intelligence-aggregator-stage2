@@ -1,0 +1,7 @@
+.env
+.env.*
+__pycache__/
+data/threat_intel.sqlite3
+.serena/
+tests/
+requirements-dashboard.txt
