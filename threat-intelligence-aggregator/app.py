@@ -1,11 +1,16 @@
-import pandas as pd
-import requests
-import streamlit as st
+from ipaddress import ip_address
+from urllib.parse import urlsplit
 
 import database
 import feed_manager
 import normalizer
+import pandas as pd
 import reporting
+import requests
+import streamlit as st
+from fastapi import FastAPI, HTTPException
+from fastapi.responses import HTMLResponse, Response
+from pydantic import BaseModel
 from risk_engine import severity
 
 st.set_page_config(
@@ -89,9 +94,12 @@ with entry_column, st.container(border=True):
                 "Indicator value",
                 placeholder="192.0.2.10, example.org, or https://example.org",
             )
-        add_indicator = st.form_submit_button("Add indicator", type="primary")
+        indicator_submitted = st.form_submit_button(
+            "Add indicator",
+            type="primary",
+        )
 
-    if add_indicator:
+    if indicator_submitted:
         try:
             kind, canonical_value = normalize_manual_indicator(
                 manual_type,
@@ -295,13 +303,6 @@ with rejected_column:
         )
 
 st.caption("Risk scores are heuristic triage hints, not proof of maliciousness.")
-
-from ipaddress import ip_address
-from urllib.parse import urlsplit
-
-from fastapi import FastAPI, HTTPException
-from fastapi.responses import HTMLResponse, Response
-from pydantic import BaseModel
 
 app = FastAPI(title="Threat Intelligence Aggregator")
 
